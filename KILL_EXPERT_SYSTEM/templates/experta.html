@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hate unik</title>
+    <style>
+        .width100{
+            display: block;
+            width: 100%;
+        }
+
+        td{
+            min-width: 3rem;
+        }
+
+        .rightTd{
+            min-width: 10rem;
+        }
+
+        select{
+            width: 100%;
+        }
+
+        #calculate {
+            min-height: 1.3rem;
+            background: yellow;
+            border: 1px solid gray;
+            border-radius: 0.2rem;
+        }
+
+        #calculate:hover {
+            background: orange;
+        }
+    </style>
+</head>
+<body>
+    <h4>Введите свои навыки:</h4>
+    <section style="display: flex;">
+        <table>
+            <tbody>
+                <tr>
+                    <td>Навык 1</td>
+                    <td class="rightTd">
+                        <select id="skill1">
+                          <option selected>Выберите навык...</option>
+                          <option>Опыт преподавания</option>
+                          <option>Без опыта</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Навык 2</td>
+                    <td class="rightTd">
+                        <select id="skill2">
+                          <option selected>Выберите навык...</option>
+                          <option>Грамотная речь</option>
+                          <option>Неграмотная речь</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Навык 3</td>
+                    <td class="rightTd">
+                        <select id="skill3">
+                          <option selected>Выберите навык...</option>
+                          <option>Пользователь ПК</option>
+                          <option>Никогда не пользовался ПК</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Навык 4</td>
+                    <td class="rightTd">
+                        <select id="skill4">
+                          <option selected>Выберите навык...</option>
+                          <option>Умение вести клиента</option>
+                          <option>Понятия не имею о чем вы</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Навык 5</td>
+                    <td class="rightTd">
+                        <select id="skill5">
+                          <option selected>Выберите навык...</option>
+                          <option>Высшее образование</option>
+                          <option>Нет образования</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Навык 6</td>
+                    <td class="rightTd">
+                        <select id="skill6">
+                          <option selected>Выберите навык...</option>
+                          <option>Знание английского</option>
+                          <option>Русский то плохо знаю</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Навык 7</td>
+                    <td class="rightTd">
+                        <select id="skill7">
+                          <option selected>Выберите навык...</option>
+                          <option>Знание SQL</option>
+                          <option>Это что?</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Навык 8</td>
+                    <td class="rightTd">
+                        <select id="skill8">
+                          <option selected>Выберите навык...</option>
+                          <option>Знание Python</option>
+                          <option>Не...</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Навык 9</td>
+                    <td class="rightTd">
+                        <select id="skill9">
+                          <option selected>Выберите навык...</option>
+                          <option>Знание Java</option>
+                          <option>Не...</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Навык 10</td>
+                    <td class="rightTd">
+                        <select id="skill10">
+                          <option selected>Выберите навык...</option>
+                          <option>Знание ООП</option>
+                          <option>Не...</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Навык 11</td>
+                    <td class="rightTd">
+                        <select id="skill11">
+                          <option selected>Выберите навык...</option>
+                          <option>Опыт в написании нейросетей</option>
+                          <option>Не...</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Навык 12</td>
+                    <td class="rightTd">
+                        <select id="skill12">
+                          <option selected>Выберите навык...</option>
+                          <option>Знание статистики</option>
+                          <option>Не...</option>
+                        </select>
+                    </td>
+                </tr>
+               <tr>
+                    <td>Навык 13</td>
+                    <td class="rightTd">
+                        <select id="skill13">
+                          <option selected>Выберите навык...</option>
+                          <option>Умение работать в коллективе</option>
+                          <option>Не...Я соло геймер</option>
+                        </select>
+                    </td>
+                </tr>
+                 <tr>
+                    <td>Навык 14</td>
+                    <td class="rightTd">
+                        <select id="skill14">
+                          <option selected>Выберите навык...</option>
+                          <option>Вождение автомобиля</option>
+                          <option>Катаюсь на автобусе</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button id="calculate" class="width100" onclick="calculate()">Рассчитать</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="resultDiv" style="margin-left: 1rem;"></div>
+    </section>
+</body>
+<script type="text/javascript" src="{% static '/experta.js' %}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</html>
